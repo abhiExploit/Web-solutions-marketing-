@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --color-navy: var(--navy);
+  --color-navy-light: var(--navy-light);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+:root {
+  color-scheme: light;
+  --background: #f5f7fb;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #1565f5;
+  --primary-foreground: #ffffff;
+  --secondary: #eaf1ff;
+  --secondary-foreground: #1565f5;
+  --muted: #f1f4f9;
+  --muted-foreground: #64748b;
+  --accent: #eaf1ff;
+  --accent-foreground: #1565f5;
+  --destructive: #e5484d;
+  --success: #16a34a;
+  --warning: #f59e0b;
+  --border: #e3e8f0;
+  --input: #dbe2ec;
+  --ring: #1565f5;
+  --navy: #0a1730;
+  --navy-light: #12244a;
+  --radius: 0.625rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
